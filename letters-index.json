@@ -1,0 +1,52 @@
+{
+  "letters": [
+    {
+      "id": 1,
+      "filename": "letter-001.txt",
+      "title": "Dear Mom",
+      "category": "Family",
+      "dateAdded": "2024-10-08",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "filename": "letter-002.txt",
+      "title": "To My Best Friend",
+      "category": "Friendship",
+      "dateAdded": "2024-10-09",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "filename": "letter-003.txt",
+      "title": "Goodbye Dad",
+      "category": "Family",
+      "dateAdded": "2024-10-10",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "filename": "letter-004.txt",
+      "title": "My Love",
+      "category": "Romance",
+      "dateAdded": "2024-10-11",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "filename": "letter-005.txt",
+      "title": "Dear Grandma",
+      "category": "Family",
+      "dateAdded": "2024-10-12",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "filename": "letter-006.txt",
+      "title": "To My Brother",
+      "category": "Family",
+      "dateAdded": "2024-10-13",
+      "featured": true
+    }
+  ]
+}

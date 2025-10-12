@@ -1,6 +1,8 @@
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,24 +34,31 @@ body::before {
   overflow: hidden;
   margin-bottom: 50px;
   position: relative;
+  min-height: 60px;
 }
-.topnav img {
+.topnav .logo-link {
   float: left;
-  padding-right: 80px;
+  padding-right: 20px;
   padding-bottom: 20px;
   margin-top: -15px;
+  display: block;
 }
-.topnav a {
+.topnav .logo-link img {
+  display: block;
+  width: 70px;
+  height: auto;
+}
+.topnav a:not(.logo-link) {
   float: right;
   color: #27cee4;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 18px;
   border-radius: 8px;
   margin-left: 10px;
 }
-.topnav a:hover {
+.topnav a:not(.logo-link):hover {
   background-color: #27cee4;
   color: white;
 }
@@ -58,73 +67,139 @@ body::before {
   color: white;
 }
 .topnav .quote {
-  position: absolute;
-  left: 40%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  color: #27cee4;
-  font-size: 20px;
-  font-weight: bold;
+  display: none;
 }
 .h1 {
   color: #27cee4;
   text-align: center;
-  font-size: 120px;
+  font-size: 80px;
   font-family: "Cherish", cursive;
   margin-top: 0px;
   margin-bottom: 40px;
-  font-weight: normal
+  font-weight: normal;
 }
 
 .about-text {
  color: #27cee4;
- font-size: 18px;
- line-height: 50px;
- width: 50%;
+ font-size: 16px;
+ line-height: 1.8;
+ width: 90%;
  margin: auto;
- margin-bottom: 50px;
+ margin-bottom: 40px;
+ font-weight: bold;
 }
+
 .logo {
   display: block;
-  margin: auto;
-  width: 40%;
+  text-align: center;
+  margin: 50px auto;
 }
 
+.logo img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 5%;
+}
 
+/* Desktop styles */
+@media (min-width: 768px) {
+  body {
+    padding: 20px 40px;
+  }
+  .topnav .logo-link {
+    padding-right: 80px;
+  }
+  .topnav .logo-link img {
+    width: 90px;
+  }
+  .topnav a:not(.logo-link) {
+    font-size: 21px;
+  }
+  .topnav .quote {
+    display: block;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: #27cee4;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .h1 {
+    font-size: 120px;
+  }
+  .about-text {
+    font-size: 18px;
+    line-height: 2.5;
+    width: 60%;
+    margin-bottom: 80px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+  .topnav {
+    margin-bottom: 30px;
+  }
+  .topnav a:not(.logo-link) {
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-left: 5px;
+  }
+  .h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .about-text {
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  .logo {
+    margin: 30px auto;
+  }
+}
 </style>
 
 </head>
 
 <body>
-<body>
   <div class="topnav">
-  <img src="Assets/LOGO.PNG" width="90" alt="logo"/>
-  <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
-  <a class="active" href="about.html">About</a>
-  <a href="your-letters.html">Your Letters</a>
-  <a href="index.html">Write a Letter</a>
-</div>
+    <a href="https://www.charliespromise.org/" class="logo-link">
+      <img src="Assets/LOGO.PNG" alt="logo"/>
+    </a>
+    <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
+    <a class="active" href="about.html">About</a>
+    <a href="your-letters.html">Your Letters</a>
+    <a href="index.html">Write a Letter</a>
+  </div>
 
+  <h1 class="h1">About</h1>	
 
-<h1 class="h1">About</h1>	
+  <div class="about-text"> 
+    This is a space for people of all ages to openly and anonymously share how life crime has impacted their
+    lives and the lives of those around them.
 
-<div class="about-text"> 
-    "about text here about text here about text hereabout text here about text 
-    here about text here about text here about text here about text here 
-     about text here about text here about text here about text here about 
-     text here about text here about text here about text here about text here
-     about text here about text here about text hereabout text here about text 
-    here about text here about text here about text here about text here 
-     about text here about text here about text here about text here about 
-     text here about text here about text here about text here about text here"
-    </div>
+    Everyone is encouraged to share their experiences in the form of a letter. 
+    It could be a letter about how knife crime has impacted you, your friends, 
+    your family, or even just your thoughts and feelings.
+  </div>
+    
+  <div class="about-text"> 
+    This idea came into being as a result of the Charlie's Promise, a group which educates
+    young people on the effect crime has on the victim's family and friends,
+    and the wider communities. In this spirit we hope that people can learn about the impact
+    of knife crime, through the words of those most effected by it.
+  </div>
 
-<img class="logo"src="Assets/letter.png" alt="Letter">
-
-
-
+  <a href="https://www.charliespromise.org/" class="logo">
+    <img src="Assets/charlies-promise.jpg" alt="Charlie's Promise Logo"/>
+  </a>
 
 </body>
-
-
 </html>
+

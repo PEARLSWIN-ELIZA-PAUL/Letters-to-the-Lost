@@ -1,7 +1,7 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Letters to the Lost</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,24 +32,31 @@ body::before {
   overflow: hidden;
   margin-bottom: 50px;
   position: relative;
+  min-height: 60px;
 }
-.topnav img {
+.topnav .logo-link {
   float: left;
-  padding-right: 80px;
+  padding-right: 20px;
   padding-bottom: 20px;
   margin-top: -15px;
+  display: block;
 }
-.topnav a {
+.topnav .logo-link img {
+  display: block;
+  width: 70px;
+  height: auto;
+}
+.topnav a:not(.logo-link) {
   float: right;
   color: #27cee4;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 21px;
+  font-size: 18px;
   border-radius: 8px;
   margin-left: 10px;
 }
-.topnav a:hover {
+.topnav a:not(.logo-link):hover {
   background-color: #27cee4;
   color: white;
 }
@@ -58,18 +65,12 @@ body::before {
   color: white;
 }
 .topnav .quote {
-  position: absolute;
-  left: 40%;
-  top: 30%;
-  transform: translate(-50%, -50%);
-  color: #27cee4;
-  font-size: 20px;
-  font-weight: bold;
+  display: none;
 }
 .h1 {
   color: #27cee4;
   text-align: center;
-  font-size: 120px;
+  font-size: 80px;
   font-family: "Cherish", cursive;
   margin-top: 0px;
   margin-bottom: 40px;
@@ -78,7 +79,7 @@ body::before {
 .form-container {
   max-width: 600px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
 }
 .form-group {
   margin-bottom: 20px;
@@ -114,38 +115,88 @@ body::before {
 .submit-btn:hover {
   background-color: #1fa8bd;
 }
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  body {
+    padding: 20px 40px;
+  }
+  .topnav .logo-link {
+    padding-right: 80px;
+  }
+  .topnav .logo-link img {
+    width: 90px;
+  }
+  .topnav a:not(.logo-link) {
+    font-size: 21px;
+  }
+  .topnav .quote {
+    display: block;
+    position: absolute;
+    left: 40%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    color: #27cee4;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .h1 {
+    font-size: 120px;
+  }
+  .form-container {
+    padding: 30px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  body {
+    padding: 10px;
+  }
+  .topnav {
+    margin-bottom: 30px;
+  }
+  .topnav a:not(.logo-link) {
+    font-size: 14px;
+    padding: 10px 8px;
+    margin-left: 5px;
+  }
+  .h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+  }
+  .form-container {
+    padding: 10px;
+  }
+}
 </style>
-
-
-
-
-
-
-
-
 </head>
 <body>
- 
   <div class="topnav">
-  <img src="Assets/LOGO.PNG" width="90" alt="logo"/>
-  <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
-  <a href="about.html">About</a>
-  <a href="your-letters.html">Your Letters</a>
-  <a class="active" href="Index.html">Write a Letter</a>
-</div>
-<h1 class="h1">Letters to the Lost</h1>
-<div class="form-container">
-  <form action="https://formspree.io/f/mrbyagvb" method="POST">
-    <div class="form-group">
-      <input type="text" name="subject" placeholder="Letter Subject" required>
-    </div>
-   
-    <div class="form-group">
-      <textarea name="message" placeholder="Write your letter here..." required></textarea>
-    </div>
-   
-    <button type="submit" class="submit-btn">Send Letter</button>
-  </form>
-</div>
+    <a href="https://www.charliespromise.org/" class="logo-link">
+      <img src="Assets/LOGO.PNG" alt="logo"/>
+    </a>
+    <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
+    <a href="about.html">About</a>
+    <a href="your-letters.html">Your Letters</a>
+    <a class="active" href="index.html">Write a Letter</a>
+  </div>
+
+  <h1 class="h1">Letters to the Lost</h1>
+
+  <div class="form-container">
+    <form action="https://formspree.io/f/mrbyagvb" method="POST">
+      <div class="form-group">
+        <input type="text" name="subject" placeholder="Letter Subject" required>
+      </div>
+      
+      <div class="form-group">
+        <textarea name="message" placeholder="Write your letter here..." required></textarea>
+      </div>
+      
+      <button type="submit" class="submit-btn">Send Letter</button>
+    </form>
+  </div>
+
 </body>
 </html>
