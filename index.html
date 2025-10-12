@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Letters to the Lost</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cherish&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(Assets/hearts.gif);
+    background-size: cover;
+    filter: blur(3px);
+    opacity: 0.2;  
+    z-index: -1;
+}
+	
+.topnav {
+  overflow: hidden;
+  margin-bottom: 50px;
+  position: relative;
+}
+.topnav img {
+  float: left;
+  padding-right: 80px;
+  padding-bottom: 20px;
+  margin-top: -15px;
+}
+.topnav a {
+  float: right;
+  color: #27cee4;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 21px;
+  border-radius: 8px;
+  margin-left: 10px;
+}
+.topnav a:hover {
+  background-color: #27cee4;
+  color: white;
+}
+.topnav a.active {
+  background-color: #27cee4;
+  color: white;
+}
+.topnav .quote {
+  position: absolute;
+  left: 40%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  color: #27cee4;
+  font-size: 20px;
+  font-weight: bold;
+}
+.h1 {
+  color: #27cee4;
+  text-align: center;
+  font-size: 120px;
+  font-family: "Cherish", cursive;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  box-sizing: border-box;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  border-radius: 8px;
+  border: 2px solid #27cee4;
+}
+.form-group textarea {
+  min-height: 200px;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.submit-btn {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  background-color: #27cee4;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.submit-btn:hover {
+  background-color: #1fa8bd;
+}
+</style>
+
+
+
+
+
+
+
+
+</head>
+<body>
+ 
+  <div class="topnav">
+  <img src="Assets/LOGO.PNG" width="90" alt="logo"/>
+  <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
+  <a href="about.html">About</a>
+  <a href="your-letters.html">Your Letters</a>
+  <a class="active" href="Index.html">Write a Letter</a>
+</div>
+<h1 class="h1">Letters to the Lost</h1>
+<div class="form-container">
+  <form action="https://formspree.io/f/mrbyagvb" method="POST">
+    <div class="form-group">
+      <input type="text" name="subject" placeholder="Letter Subject" required>
+    </div>
+   
+    <div class="form-group">
+      <textarea name="message" placeholder="Write your letter here..." required></textarea>
+    </div>
+   
+    <button type="submit" class="submit-btn">Send Letter</button>
+  </form>
+</div>
+</body>
+</html>
