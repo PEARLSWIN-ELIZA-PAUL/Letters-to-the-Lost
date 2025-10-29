@@ -225,14 +225,14 @@ body::before {
   .topnav a:not(.logo-link) {
     font-size: 21px;
   }
-  .topnav .quote {
+    .topnav .quote {
     display: block;
     position: absolute;
     left: 40%;
     top: 30%;
     transform: translate(-50%, -50%);
     color: #27cee4;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   .h1 {
@@ -313,6 +313,62 @@ body::before {
     max-width: 250px;
   }
 }
+
+/* Footer styles */
+.footer {
+  background-color: rgba(39, 206, 228, 0.1);
+  padding: 30px 20px;
+  text-align: center;
+  margin-top: 80px;
+  border-top: 2px solid #27cee4;
+}
+.footer-text {
+  color: #27cee4;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.footer-text a {
+  color: #27cee4;
+  text-decoration: underline;
+}
+.footer-text a:hover {
+  color: #1fa8bd;
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.social-links a {
+  display: block;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.social-links a:hover {
+  transform: scale(1.1);
+  opacity: 0.25;
+}
+.social-links img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 20px;
+  }
+  .footer-text {
+    font-size: 18px;
+  }
+  .social-links img {
+    width: 50px;
+    height: 50px;
+  }
+}
 	
 </style>	
 </head>
@@ -322,7 +378,7 @@ body::before {
     <a href="https://www.charliespromise.org/" class="logo-link">
       <img src="Assets/LOGO.PNG" alt="logo"/>
     </a>
-    <span class="quote">"Be the Charlie in someones life, and if you dont have one, we've got you..."</span>
+    <span class="quote">"Be the reason someone lives, not the reason they are remembered..."</span>
     <a href="about.html">About</a>
     <a class="active" href="your-letters.html">Your Letters</a>
     <a href="index.html">Write a Letter</a>
@@ -345,6 +401,24 @@ body::before {
       </div>
     </div>
   </div>
+
+  <footer class="footer">
+    <div class="footer-text">
+      If you or anyone you know is affected by knife crime, please contact 
+      <a href="https://www.charliespromise.org/">charliespromise.org</a>
+    </div>
+    <div class="social-links">
+      <a href="https://www.facebook.com/profile.php?id=61560007838287" target="_blank">
+        <img src="Assets/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/charliespromisecharity/" target="_blank">
+        <img src="Assets/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com/company/charlies-promise/" target="_blank">
+        <img src="Assets/linkedin.png" alt="LinkedIn">
+      </a>
+    </div>
+  </footer>
 
   <script>
   var modal = document.getElementById("myModal");
@@ -435,5 +509,4 @@ body::before {
   </script>
 
 </body>
-
 </html>
